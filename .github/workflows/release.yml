@@ -9,6 +9,7 @@ on:
 jobs:
   docker:
     name: Build and Push Docker images 💿💻
+    environment: Docker
     runs-on: ubuntu-latest
 
     steps:
