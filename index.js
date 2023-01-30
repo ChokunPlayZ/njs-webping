@@ -4,6 +4,7 @@ const env = process.env;
 let url = env.URL;
 let enlog;
 let delay;
+let useragent = "Mozilla/5.0 (compatible; AhrefsBot/7.0;  http://ahrefs.com/robot/)";
 
 if (!url) {
     console.error(`"URL" Enviorment Varible is not present, quiting`);
@@ -40,7 +41,7 @@ const sendreq = async function(u) {
         method: 'get',
         url: u,
         headers: {
-            'User-Agent': 'ChokunPlayZ NodeJS WebPing; https://github.com/ChokunPlayZ/njs-webping'
+            'User-Agent': useragent
         }
     })
     .then(function (res) {

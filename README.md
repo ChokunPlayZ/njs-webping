@@ -16,3 +16,16 @@ docker run -d \
   --restart unless-stopped \
   chokunplayz/njs-webping:stable
 ```
+
+# การใช้งาน
+
+```sh
+docker run -d \
+  --name=WebPing \
+  -e TZ=Asia/Bangkok \
+  -e ENABLE_LOG=FALSE `# Response Time Logging (default: FALSE)` \
+  -e URL=https://example.com/ `# Set this to the url you want to ping` \
+  -e DELAY=30000 `# ระยะเวลาระหว่าง request (ms)` \
+  --restart unless-stopped \
+  chokunplayz/njs-webping:stable
+```
