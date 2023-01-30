@@ -4,7 +4,7 @@ const env = process.env;
 let url = env.URL;
 let enlog;
 let delay;
-let useragent = "Mozilla/5.0 (compatible; AhrefsBot/7.0;  http://ahrefs.com/robot/)";
+let useragent = "Mozilla/5.0 (compatible; ChokunPlayZ WebPing/2.0;  https://github.com/ChokunPlayZ/njs-webping/)";
 
 if (!url) {
     console.error(`"URL" Enviorment Varible is not present, quiting`);
