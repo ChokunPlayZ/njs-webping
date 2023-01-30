@@ -40,7 +40,7 @@ const sendreq = async function(u) {
         method: 'get',
         url: u,
         headers: {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:108.0) ChokunPlayZ/1.2'
+            'User-Agent': 'ChokunPlayZ NodeJS WebPing; https://github.com/ChokunPlayZ/njs-webping'
         }
     })
     .then(function (res) {
