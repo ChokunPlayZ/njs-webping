@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "axios": "^1.2.3",
+    "console-stamp": "^3.1.0"
+  },
+  "name": "njs_webping",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chokun Rojanapron",
+  "license": "ISC",
+  "description": "a simple nodejs script designed to ping a url at a interval"
+}
