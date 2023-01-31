@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Prep 📁
-        run: "$(echo ${{ github.sha }} | cut -c1-7)"
+        run: "$(echo '${{ github.sha }}' | cut -c1-7)"
 
       - name: Checkout ⬇️
         uses: actions/checkout@v3.2.0
