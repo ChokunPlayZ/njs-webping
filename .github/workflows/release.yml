@@ -45,8 +45,8 @@ jobs:
             IS_STABLE=1
           tags: |
             chokunplayz/njs-webping:stable
-            chokunplayz/njs-webping:stable.${{ github.event.release.tag_name }}
+            chokunplayz/njs-webping:stable.${{ github.sha:0:7 }}
             chokunplayz/njs-webping:latest
             ghcr.io/chokunplayz/njs-webping:stable
-            ghcr.io/chokunplayz/njs-webping:stable.${{ github.event.release.tag_name }}
+            ghcr.io/chokunplayz/njs-webping:stable.${{ github.sha:0:7 }}
             ghcr.io/chokunplayz/njs-webping:latest
