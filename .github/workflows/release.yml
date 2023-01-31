@@ -45,8 +45,8 @@ jobs:
             IS_STABLE=1
           tags: |
             chokunplayz/njs-webping:stable
-            chokunplayz/njs-webping:stable.$(echo ${{ github.sha }} | cut -c1-7)
+            chokunplayz/njs-webping:stable.${{ substr(github.sha, 0, 7) }}
             chokunplayz/njs-webping:latest
             ghcr.io/chokunplayz/njs-webping:stable
-            ghcr.io/chokunplayz/njs-webping:stable.$(echo ${{ github.sha }} | cut -c1-7)
+            ghcr.io/chokunplayz/njs-webping:stable.${{ substr(github.sha, 0, 7) }}
             ghcr.io/chokunplayz/njs-webping:latest
