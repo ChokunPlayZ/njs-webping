@@ -1,5 +1,7 @@
 # NJS-Webping
 
+[![Build](https://github.com/ChokunPlayZ/njs-webping/actions/workflows/release.yml/badge.svg)](https://github.com/ChokunPlayZ/njs-webping/actions/workflows/release.yml)
+
 this is a simple nodejs script that will ping a website at a interval
 
 you can adopt this to use as a alterative for cornjob or whatever is your previous solution
