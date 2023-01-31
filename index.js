@@ -1,10 +1,11 @@
 const axios = require('axios');
-require('console-stamp')(console, '[dd.mm.yyyy][HH:MM:ss]')
+require('console-stamp')(console, '[dd.mm.yyyy][HH:MM:ss]');
 const env = process.env;
 let url = env.URL;
 let enlog;
 let delay;
 let useragent = "Mozilla/5.0 (compatible; ChokunPlayZ WebPing/2.0;  https://github.com/ChokunPlayZ/njs-webping/)";
+let method;
 
 if (!url) {
     console.error(`"URL" Enviorment Varible is not present, quiting`);
@@ -22,6 +23,12 @@ if (!env.ENABLE_LOG) {
 } else {
     enlog = Boolean(env.ENABLE_LOG);
 }
+if (!env.METHOD) {
+    console.log(`"METHOD" env is not provided, defaulting to "HEAD"`)
+    method = "HEAD"
+} else {
+    method = env.METHOD
+}
 
 console.log(`---------------------------`);
 console.log(`Nodejs WebPing, V2.0`);
@@ -38,7 +45,7 @@ const sendreq = async function(u) {
     let startTime;
 
     axios({
-        method: 'get',
+        method: method,
         url: u,
         headers: {
             'User-Agent': useragent

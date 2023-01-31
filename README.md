@@ -13,6 +13,7 @@ docker run -d \
   -e ENABLE_LOG=FALSE `# Response Time Logging (default: FALSE)` \
   -e URL=https://example.com/ `# Set this to the url you want to ping` \
   -e DELAY=30000 `# Delay Between Request in miliseconds if left blank will default to 1m` \
+  -e METHOD=GET `# HTTP Method that is used to ping the site, if not provided will deault to "HEAD"` \
   --restart unless-stopped \
   chokunplayz/njs-webping:stable
 ```
@@ -26,6 +27,7 @@ docker run -d \
   -e ENABLE_LOG=FALSE `# Response Time Logging (default: FALSE)` \
   -e URL=https://example.com/ `# Set this to the url you want to ping` \
   -e DELAY=30000 `# ระยะเวลาระหว่าง request (ms)` \
+  -e METHOD=GET `# HTTP Method ที่ต้องการใช้ ถ้าไม่มีค่านี้ จะตั้งเป็น HEAD อัตโนมัติ`\
   --restart unless-stopped \
   chokunplayz/njs-webping:stable
 ```
