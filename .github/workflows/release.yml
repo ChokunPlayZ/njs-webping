@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Prep 📁
-        run: "sha_short=$(echo ${{ github.sha }} | cut -c1-7) >> $GITHUB_ENV"
+        run: "$(echo ${{ github.sha }} | cut -c1-7)"
 
       - name: Checkout ⬇️
         uses: actions/checkout@v3.2.0
@@ -49,7 +49,7 @@ jobs:
           tags: |
             chokunplayz/njs-webping:stable
             chokunplayz/njs-webping:latest
-            chokunplayz/njs-webping:${{ env.sha_short }}
+            chokunplayz/njs-webping:${{ github.sha }}
             ghcr.io/chokunplayz/njs-webping:stable
             ghcr.io/chokunplayz/njs-webping:latest
-            ghcr.io/chokunplayz/njs-webping:${{ env.sha_short }}
+            ghcr.io/chokunplayz/njs-webping:${{ github.sha }}
