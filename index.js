@@ -37,7 +37,7 @@ console.log(`https://github.com/ChokunPlayZ/`);
 console.log(`---------------------------`);
 console.log(`Ping URL: ${url}`);
 console.log(`Ping Delay: ${delay} (ms)`);
-console.log(`Requst Logging: ${enlog}`);
+console.log(`Requst Logging: ${enlog} / ${env.ENABLE_LOG}`);
 console.log(`System Timzone: ${Intl.DateTimeFormat().resolvedOptions().timeZone}\n\n`);
 console.log(`---------------------------`);
 
