@@ -21,7 +21,7 @@ if (!env.ENABLE_LOG) {
     console.log(`"ENABLE_LOG" env is not present, disabling by default`);
     enlog = false;
 } else {
-    enlog = (env.ENABLE_LOG.toLowerCase === "true");
+    enlog = (env.ENABLE_LOG.toLowerCase() === "true");
 }
 if (!env.METHOD) {
     console.log(`"METHOD" env is not provided, defaulting to "HEAD"`)
